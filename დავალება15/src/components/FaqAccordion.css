@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.faq-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(180deg, #a86ff0, #f06ba8);
+}
+
+.faq-card {
+  background: white;
+  border-radius: 12px;
+  max-width: 480px;
+  width: 100%;
+  padding: 24px;
+}
+
+.faq-illustration {
+  display: block;
+  width: 200px;
+  margin: 0 auto 16px;
+}
+
+.faq-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+  margin-bottom: 12px;
+}
+
+.faq-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  font-family: "Kumbh Sans", sans-serif;
+  text-align: left;
+}
+
+.faq-question-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: hsl(237, 12%, 33%);
+}
+
+.faq-question:hover .faq-question-text,
+.faq-question-text.active {
+  color: hsl(14, 88%, 65%);
+}
+
+.faq-arrow {
+  color: hsl(14, 88%, 65%);
+  margin-left: 12px;
+}
+
+.faq-arrow.open {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  font-size: 0.9rem;
+  color: hsl(240, 6%, 50%);
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
