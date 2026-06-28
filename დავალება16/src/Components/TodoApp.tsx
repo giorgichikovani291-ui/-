@@ -1,10 +1,12 @@
 import { useState } from "react";
+import type { FormEvent } from "react";
 import TodoHero from "./TodoHero";
 import TodoInputBar from "./TodoInputBar";
 import TodoList from "./TodoList";
+import type { Todo } from "./types";
 import "./TodoApp.css";
 
-function formatNowLabel() {
+function formatNowLabel(): string {
   const now = new Date();
   let hours = now.getHours();
   const minutes = now.getMinutes().toString().padStart(2, "0");
@@ -15,18 +17,33 @@ function formatNowLabel() {
 }
 
 export default function TodoApp() {
-  const [todos, setTodos] = useState([
+  const [todos, setTodos] = useState<Todo[]>([
     { id: 1, text: "Dinner", time: "Today at 8:00 PM", completed: true },
-    { id: 2, text: "Walk with Coby", time: "Today at 3:30 PM", completed: false },
-    { id: 3, text: "Buy Groceries", time: "Today at 10:00 AM", completed: false },
-    { id: 4, text: "Go to repair shop", time: "Today at 9:00 AM", completed: false },
+    {
+      id: 2,
+      text: "Walk with Coby",
+      time: "Today at 3:30 PM",
+      completed: false,
+    },
+    {
+      id: 3,
+      text: "Buy Groceries",
+      time: "Today at 10:00 AM",
+      completed: false,
+    },
+    {
+      id: 4,
+      text: "Go to repair shop",
+      time: "Today at 9:00 AM",
+      completed: false,
+    },
   ]);
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState<string>("");
 
-  function handleAddTodo(e) {
+  function handleAddTodo(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (inputValue.trim() === "") return;
-    const newTodo = {
+    const newTodo: Todo = {
       id: Date.now(),
       text: inputValue.trim(),
       time: formatNowLabel(),
@@ -36,15 +53,15 @@ export default function TodoApp() {
     setInputValue("");
   }
 
-  function handleToggleTodo(id) {
+  function handleToggleTodo(id: number) {
     setTodos(
       todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo
-      )
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo,
+      ),
     );
   }
 
-  function handleDeleteTodo(id) {
+  function handleDeleteTodo(id: number) {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
 

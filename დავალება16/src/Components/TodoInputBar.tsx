@@ -1,4 +1,16 @@
-export default function TodoInputBar({ value, onChange, onSubmit }) {
+import type { ChangeEvent, FormEvent } from "react";
+
+interface TodoInputBarProps {
+  value: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: (e: FormEvent<HTMLFormElement>) => void;
+}
+
+export default function TodoInputBar({
+  value,
+  onChange,
+  onSubmit,
+}: TodoInputBarProps) {
   return (
     <form className="todo-input-bar" onSubmit={onSubmit}>
       <div className="todo-input-pill">

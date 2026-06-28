@@ -1,4 +1,12 @@
-export default function TodoItem({ todo, onToggle, onDelete }) {
+import type { Todo } from "./types";
+
+interface TodoItemProps {
+  todo: Todo;
+  onToggle: (id: number) => void;
+  onDelete: (id: number) => void;
+}
+
+export default function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
   return (
     <li className="todo-item">
       <div className="todo-item-text">
@@ -8,9 +16,7 @@ export default function TodoItem({ todo, onToggle, onDelete }) {
 
       <div className="todo-item-actions">
         <button
-          className={
-            todo.completed ? "todo-check checked" : "todo-check"
-          }
+          className={todo.completed ? "todo-check checked" : "todo-check"}
           onClick={() => onToggle(todo.id)}
         >
           {todo.completed && "✓"}
