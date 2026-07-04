@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  transition: background-color 0.2s;
+}
+
+.app.light {
+  background-color: #f6f8ff;
+}
+
+.app.dark {
+  background-color: #141d2f;
+}
+
+.container {
+  width: 100%;
+  max-width: 730px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ---- HEADER ---- */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222731;
+}
+
+.app.dark .header-logo {
+  color: #ffffff;
+}
+
+.header-theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #4b6a9b;
+}
+
+.app.dark .header-theme-btn {
+  color: #ffffff;
+}
+
+.header-theme-icon {
+  font-size: 1rem;
+}
+
+/* ---- SEARCH BAR ---- */
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fefefe;
+  border-radius: 15px;
+  padding: 10px 10px 10px 20px;
+  box-shadow: 0 16px 30px rgba(70, 96, 187, 0.2);
+}
+
+.app.dark .search-bar {
+  background: #1e2a47;
+}
+
+.search-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: "Space Mono", monospace;
+  font-size: 0.95rem;
+  color: #222731;
+}
+
+.app.dark .search-input {
+  color: #ffffff;
+}
+
+.search-input::placeholder {
+  color: #697c8c;
+}
+
+.search-error {
+  color: #f74646;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.search-btn {
+  background: #0079ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-btn:hover {
+  background: #60abff;
+}
+
+/* ---- USER CARD ---- */
+
+.user-card {
+  background: #fefefe;
+  border-radius: 15px;
+  padding: 40px 48px;
+  display: flex;
+  gap: 36px;
+  box-shadow: 0 16px 30px rgba(70, 96, 187, 0.2);
+}
+
+.app.dark .user-card {
+  background: #1e2a47;
+}
+
+.user-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.user-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.user-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2b3442;
+  margin: 0 0 4px;
+}
+
+.app.dark .user-name {
+  color: #ffffff;
+}
+
+.user-login {
+  color: #0079ff;
+  font-size: 0.95rem;
+}
+
+.user-joined {
+  font-size: 0.85rem;
+  color: #697c8c;
+}
+
+.app.dark .user-joined {
+  color: #ffffff;
+}
+
+.user-bio {
+  color: #4b6a9b;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.app.dark .user-bio {
+  color: #ffffff;
+}
+
+.user-bio.unavailable {
+  opacity: 0.5;
+}
+
+/* ---- STATS ---- */
+
+.stats-row {
+  background: #f6f8ff;
+  border-radius: 10px;
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.app.dark .stats-row {
+  background: #141d2f;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stats-label {
+  font-size: 0.78rem;
+  color: #4b6a9b;
+}
+
+.app.dark .stats-label {
+  color: #ffffff;
+}
+
+.stats-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2b3442;
+}
+
+.app.dark .stats-value {
+  color: #ffffff;
+}
+
+/* ---- INFO GRID ---- */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #4b6a9b;
+}
+
+.app.dark .info-item {
+  color: #ffffff;
+}
+
+.info-item.unavailable {
+  opacity: 0.5;
+}
+
+.info-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
