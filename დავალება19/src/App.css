@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  color: rgba(29, 32, 38, 1);
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===================== HEADER ===================== */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(230, 231, 233, 1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-btn {
+  display: block;
+}
+
+.logo {
+  color: rgba(29, 32, 38, 1);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.nav-desktop {
+  display: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: rgba(255, 126, 27, 1);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  object-fit: cover;
+  cursor: pointer;
+}
+.avatar:hover {
+  border-color: rgba(255, 126, 27, 1);
+}
+
+/* ===================== MOBILE MENU ===================== */
+
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 20;
+}
+
+.menu-panel {
+  background-color: #fff;
+  width: 250px;
+  height: 100%;
+  padding: 24px;
+}
+
+.menu-close {
+  margin-bottom: 40px;
+}
+
+.nav-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nav-mobile a {
+  color: rgba(29, 32, 38, 1);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* ===================== CART ===================== */
+
+.cart-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+}
+
+.cart-panel {
+  position: absolute;
+  top: 70px;
+  left: 16px;
+  right: 16px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+}
+
+.cart-panel h2 {
+  font-size: 16px;
+  border-bottom: 1px solid rgba(230, 231, 233, 1);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.cart-empty {
+  color: rgba(105, 112, 125, 1);
+  font-weight: 700;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.cart-item-text {
+  flex: 1;
+}
+
+.cart-item-text p:first-child {
+  color: rgba(105, 112, 125, 1);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.cart-item-text p:last-child {
+  color: rgba(105, 112, 125, 1);
+  font-size: 14px;
+}
+
+.cart-item-total {
+  color: rgba(29, 32, 38, 1);
+  font-weight: 700;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgba(255, 126, 27, 1);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 14px 0;
+}
+.checkout-btn:hover {
+  opacity: 0.6;
+}
+
+/* ===================== MAIN LAYOUT ===================== */
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================== GALLERY ===================== */
+
+.main-image-wrap {
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  aspect-ratio: 1.15 / 1;
+  object-fit: cover;
+  display: block;
+  cursor: default;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-left {
+  left: 16px;
+}
+
+.arrow-right {
+  right: 16px;
+}
+
+.thumbnails {
+  display: none;
+}
+
+.thumbnail-btn img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ===================== PRODUCT INFO ===================== */
+
+.product-info {
+  padding: 24px;
+}
+
+.company {
+  color: rgba(255, 126, 27, 1);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.product-info h1 {
+  color: rgba(29, 32, 38, 1);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  margin: 16px 0;
+}
+
+.description {
+  color: rgba(105, 112, 125, 1);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: rgba(29, 32, 38, 1);
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.discount {
+  color: rgba(255, 126, 27, 1);
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 6px;
+  background-color: rgba(255, 238, 226, 1);
+  padding: 4px 8px;
+}
+
+.old-price {
+  display: block;
+  color: rgba(182, 188, 200, 1);
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: line-through;
+  margin-bottom: 24px;
+}
+
+.cart-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(247, 248, 251, 1);
+  border-radius: 10px;
+  padding: 14px 20px;
+}
+
+.quantity button {
+  color: rgba(255, 126, 27, 1);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.quantity span {
+  color: rgba(29, 32, 38, 1);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: rgba(255, 126, 27, 1);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 16px 0;
+  box-shadow: 0 15px 30px -5px rgba(255, 126, 27, 0.5);
+}
+.add-to-cart:hover {
+  opacity: 0.6;
+}
+
+/* ===================== LIGHTBOX (მხოლოდ დესქტოპზე) ===================== */
+
+.lightbox-backdrop {
+  display: none;
+}
+
+/* ===================== დესქტოპ ვერსია ===================== */
+
+@media (min-width: 768px) {
+  .header {
+    padding: 0 40px;
+    max-width: 1140px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(230, 231, 233, 1);
+  }
+
+  .header-left {
+    gap: 44px;
+    align-self: stretch;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .nav-desktop a {
+    color: rgba(105, 112, 125, 1);
+    font-size: 15px;
+    padding: 30px 0;
+    border-bottom: 4px solid transparent;
+  }
+  .nav-desktop a:hover {
+    color: rgba(29, 32, 38, 1);
+    border-bottom-color: rgba(255, 126, 27, 1);
+  }
+
+  .header-right {
+    gap: 40px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cart-panel {
+    left: auto;
+    right: 40px;
+    top: 90px;
+    width: 300px;
+  }
+
+  .product {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+
+  .gallery {
+    width: 445px;
+  }
+
+  .main-image {
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .thumbnails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .thumbnail-btn {
+    width: 88px;
+    height: 88px;
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0.5;
+  }
+  .thumbnail-btn:hover {
+    opacity: 0.7;
+  }
+  .thumbnail-btn.active {
+    opacity: 1;
+    border: 2px solid rgba(255, 126, 27, 1);
+  }
+  .thumbnail-btn img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-info {
+    width: 445px;
+    padding: 0;
+  }
+
+  .product-info h1 {
+    font-size: 44px;
+    line-height: 48px;
+    margin: 30px 0 32px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .price-row {
+    margin-bottom: 16px;
+  }
+
+  .old-price {
+    margin-bottom: 32px;
+  }
+
+  .cart-row {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .quantity {
+    width: 150px;
+    flex-shrink: 0;
+  }
+
+  .add-to-cart {
+    flex: 1;
+  }
+
+  /* Lightbox მხოლოდ დესქტოპზე ჩნდება */
+  .lightbox-backdrop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 30;
+  }
+
+  .lightbox {
+    position: relative;
+    width: 445px;
+  }
+
+  .lightbox .main-image {
+    cursor: default;
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+  }
+  .lightbox-close svg path {
+    stroke: #fff;
+  }
+
+  .lightbox .arrow {
+    display: flex;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  /* ისრები ნახევრად სურათის კიდეზეა, ნახევრად გარეთ - screenshot-ის მიხედვით */
+  .lightbox .arrow-left {
+    left: -20px;
+  }
+  .lightbox .arrow-right {
+    right: -20px;
+  }
+
+  .lightbox .thumbnails {
+    margin-top: 30px;
+  }
+}
