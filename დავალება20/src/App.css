@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #cee8ea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.logo {
+  color: #5e7a7d;
+  letter-spacing: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 28px;
+  display: flex;
+  max-width: 760px;
+  width: 100%;
+  padding: 16px;
+  gap: 16px;
+  box-shadow: 0 30px 60px -20px rgba(0, 71, 75, 0.25);
+}
+
+.card-left {
+  flex: 1;
+  padding: 24px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group label {
+  color: #547376;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper .icon {
+  position: absolute;
+  left: 18px;
+  color: #93b3b6;
+  font-size: 17px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  border: none;
+  background: #eef8f9;
+  border-radius: 6px;
+  padding: 10px 18px 10px 36px;
+  font-family: "Space Mono", monospace;
+  font-size: 22px;
+  font-weight: 700;
+  color: #00474b;
+  text-align: right;
+  outline: 2px solid transparent;
+}
+
+.input-wrapper input::placeholder {
+  color: #b9d3d4;
+}
+
+.input-wrapper input:focus {
+  outline: 2px solid #26c0ab;
+}
+
+.input-wrapper.input-error input {
+  outline: 2px solid #e17457;
+}
+
+/* Bill და People ინფუთებზე +/- ისრები რომ არ გამოჩნდეს */
+.input-wrapper input::-webkit-outer-spin-button,
+.input-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-wrapper input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.people-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-text {
+  color: #e17457;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.tip-btn {
+  background: #00474b;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  /* ყველა ტიპის ღილაკი (და custom ველიც) ერთი ზომის რომ იყოს */
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.tip-btn:hover {
+  background: #9fe8df;
+  color: #00474b;
+}
+
+.tip-btn.active {
+  background: #7fd9c4;
+  color: #00474b;
+}
+
+.custom-input {
+  background: #eef8f9;
+  color: #00474b;
+  text-align: center;
+  outline: 2px solid transparent;
+}
+
+.custom-input::placeholder {
+  color: #93b3b6;
+  text-align: center;
+}
+
+.custom-input:focus {
+  outline: 2px solid #26c0ab;
+}
+
+.card-right {
+  flex: 1;
+  background: #08454a;
+  border-radius: 18px;
+  padding: 32px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.result-label {
+  /* label-ს არ დავანებოთ დიდი რიცხვის გამო ჩაპატარავება */
+  flex-shrink: 0;
+}
+
+.result-label p {
+  color: #ffffff;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.result-label span {
+  color: #7f9c9f;
+  font-size: 12px;
+}
+
+.result-value {
+  color: #26c0ab;
+  font-size: clamp(20px, 6vw, 34px);
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  /* რიცხვი აღარასდროს იშლება სიტყვა-სიტყვად, უბრალოდ ერთ ხაზზე რჩება */
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.result-value .currency {
+  font-size: 0.6em;
+  font-weight: 400;
+  margin-right: 2px;
+}
+
+.reset-btn {
+  background: #26c0ab;
+  color: #00474b;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-family: "Space Mono", monospace;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.reset-btn:hover:not(:disabled) {
+  background: #9fe8df;
+}
+
+.reset-btn:disabled {
+  background: #0d585c;
+  color: #12696e;
+  cursor: not-allowed;
+}
