@@ -1,0 +1,45 @@
+.planet-image {
+  position: relative;
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.planet-picture {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.structure-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  margin: 3px 0 0 -2px;
+  height: 98%;
+  object-fit: fill;
+}
+.saturn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  margin: 3px 0 0 -2px;
+  height: 60%;
+  margin: 52px 0 0 -30px;
+  object-fit: fill;
+}
+
+.geology-picture {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -8%);
+  width: 38%;
+}
+
+@media (min-width: 900px) {
+  .planet-image {
+    width: 300px;
+  }
+}

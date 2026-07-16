@@ -1,0 +1,43 @@
+.planet-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stat-box {
+  border: 1px solid #38384f;
+  border-radius: 4px;
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #838391;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-family: "Antonio", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  .planet-stats {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .stat-box {
+    flex: 1;
+    text-align: left;
+  }
+
+  .stat-value {
+    font-size: 40px;
+  }
+}
