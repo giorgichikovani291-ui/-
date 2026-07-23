@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #18171f;
+  --color-panel: #24232c;
+  --color-muted: #817d92;
+  --color-light: #e6e5ea;
+  --color-green: #a4ffaf;
+  --color-red: #f64a4a;
+  --color-orange: #fb7c58;
+  --color-yellow: #f8cd65;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+input[type="range"] {
+  height: 8px;
+  border-radius: 999px;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  background: transparent;
+  border-radius: 999px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  margin-top: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--color-light);
+  cursor: pointer;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background: var(--color-bg);
+  outline: 2px solid var(--color-green);
+}
+
+input[type="range"]::-moz-range-track {
+  height: 8px;
+  background: transparent;
+  border-radius: 999px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: none;
+  background: var(--color-light);
+  cursor: pointer;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  background: var(--color-bg);
+  outline: 2px solid var(--color-green);
+}
