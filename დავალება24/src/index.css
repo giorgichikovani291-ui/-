@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  background-color: #effafa;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
