@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./assets/fonts/space-mono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./assets/fonts/space-mono-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("./assets/fonts/lexend-deca-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("./assets/fonts/lexend-deca-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("./assets/fonts/lexend-deca-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("./assets/fonts/lexend-deca-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-yellow: #fcb92b;
+  --color-dark-navy: #495567;
+  --color-dim-grey: #939caa;
+  --color-light-grey: #e5ecf4;
+  --color-snow: #f2f5f9;
+  --color-light-yellow: #fff4df;
+
+  --font-heading: "Space Mono", monospace;
+  --font-body: "Lexend Deca", sans-serif;
+
+  --text-h1: 56px;
+  --text-h1--line-height: 56px;
+  --text-h1--letter-spacing: -2.5px;
+
+  --text-h2: 48px;
+  --text-h2--line-height: 48px;
+  --text-h2--letter-spacing: -2.14px;
+
+  --text-h3: 40px;
+  --text-h3--line-height: 40px;
+  --text-h3--letter-spacing: -1.79px;
+
+  --text-h4: 24px;
+  --text-h4--line-height: 28px;
+  --text-h4--letter-spacing: -1.07px;
+
+  --text-body: 15px;
+  --text-body--line-height: 25px;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark-navy);
+}
