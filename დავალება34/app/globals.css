@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #151515;
+  --color-surface: #242424;
+  --color-accent: #4ee1a0;
+  --color-muted: #d9d9d9;
+
+  --font-display: var(--font-space-grotesk);
+
+  --text-heading-xl: 88px;
+  --text-heading-xl--line-height: 88px;
+  --text-heading-xl--letter-spacing: -2.5px;
+
+  --text-heading-l: 48px;
+  --text-heading-l--line-height: 56px;
+  --text-heading-l--letter-spacing: -1.5px;
+
+  --text-heading-m: 24px;
+  --text-heading-m--line-height: 32px;
+
+  --text-body-l: 18px;
+  --text-body-l--line-height: 28px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: #ffffff;
+  font-family: var(--font-display);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(217, 217, 217, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(217, 217, 217, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
